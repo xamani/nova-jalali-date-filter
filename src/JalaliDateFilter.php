@@ -2,7 +2,7 @@
 
 namespace Xamani\JalaliDateFilter;
 
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -14,10 +14,10 @@ class JalaliDateFilter extends Filter
      * Apply the filter to the given query.
      *
      * @param \Laravel\Nova\Http\Requests\NovaRequest $request
-     * @param \Illuminate\Database\Eloquent\Builder   $query
+     * @param \Illuminate\Contracts\Database\Eloquent\Builder   $query
      * @param mixed                                   $value
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \Illuminate\Contracts\Database\Eloquent\Builder
      */
     public function apply(NovaRequest $request, Builder $query, mixed $value): Builder
     {
